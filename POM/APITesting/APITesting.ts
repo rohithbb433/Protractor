@@ -13,7 +13,7 @@ describe("Errors in Protractor", function () {
                 return console.dir(error);
             }
             console.dir("Body : ******");
-            console.dir(JSON.parse(body));
+            console.dir(JSON.parse(body))
 
             console.log(" Response Code ****:" + response.statusCode)
             // console.log(" Response Message ****:" + JSON.parse(body.page))
