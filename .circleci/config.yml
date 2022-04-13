@@ -5,15 +5,13 @@ jobs:
       - image: rohithbb433/dockerimagedem:test
        
     steps:
-      - checkout
-
 
       - run: google-chrome --version
-      
+
       - run: sleep 30s
 
 
       - run:
           name: Test Run
           command: |
-            protractor configurationFile/RunnerConf.js
+            protractor /home/Project/configurationFile/RunnerConf.js
