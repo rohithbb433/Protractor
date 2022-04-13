@@ -1,15 +1,16 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/node:8.11-browsers
-        environment:          
-          DBUS_SESSION_BUS_ADDRESS: /dev/null
+     docker:
+      - image: rohithbb433/dockerimagedem:test
+        auth:
+          username: rohithbb433
+          password: Amma725958@!
     steps:
       - checkout
 
 
-      - run: google-chrome --version 69.0.3497.81
+      - run: google-chrome 
       
       - save_cache:
           key: node_modules-{{ .Branch }}-{{ checksum "package-lock.json" }}
@@ -19,35 +20,7 @@ jobs:
 
       - run: google-chrome --version
 
-      - run:
-          name: NPM Install
-          command: |
-            npm install
-
-
-      - run:
-          name: Install Protractor
-          command: |
-            sudo npm i -g protractor
-
-
-      - run:
-          name: WebDriver Update Selenium
-          command: |      
-            sudo webdriver-manager update --versions.chrome=2.44
-          background: true
-
-
-
-      - run:
-          name: WebDriver Update
-          command: | 
-            ./node_modules/.bin/webdriver-manager update --versions.chrome=2.44
-            ./node_modules/.bin/webdriver-manager start --versions.chrome=2.44
-          background: true
-
-
-      - run: sleep 60s
+      - run: sleep 30s
 
 
       - run:
