@@ -36,7 +36,7 @@ jobs:
             sudo webdriver-manager update
           background: true
 
-          
+
 
       - run:
           name: WebDriver Update
@@ -48,7 +48,7 @@ jobs:
      
 
 
-      - run: sleep 10s
+      - run: sleep 30s
 
 
       - run:
