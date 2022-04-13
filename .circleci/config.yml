@@ -17,7 +17,8 @@ jobs:
             - "node_modules"
             - "Project/node_modules"
 
-
+      - run: google-chrome --version
+      
       - run:
           name: NPM Install
           command: |
@@ -44,7 +45,6 @@ jobs:
             ./node_modules/.bin/webdriver-manager update --versions.chrome 69.0.3497.81
           background: true
 
-    
 
       - run: sleep 60s
 
