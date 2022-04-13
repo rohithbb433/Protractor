@@ -42,8 +42,8 @@ jobs:
       - run:
           name: WebDriver Update
           command: | 
-             ./node_modules/.bin/webdriver-manager update --versions.chrome 96.0.4664.110
-             ./node_modules/.bin/webdriver-manager start --versions.chrome 96.0.4664.110
+             node ./node_modules/.bin/webdriver-manager update --versions.chrome 96.0.4664.110
+             node ./node_modules/.bin/webdriver-manager start --versions.chrome 96.0.4664.110
           background: true
 
 
