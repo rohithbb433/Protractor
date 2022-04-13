@@ -35,16 +35,15 @@ jobs:
           command: | 
             ./node_modules/.bin/webdriver-manager update --versions.chrome 69.0.3497.81
             ./node_modules/.bin/webdriver-manager start --versions.chrome 69.0.3497.81  
-          background: true
 
       - run:
           name: WebDriver Update Selenium
           command: |      
             sudo webdriver-manager update
-          background: true
+       
 
 
-      - run: sleep 10s
+      - run: sleep 30s
 
 
       - run:
