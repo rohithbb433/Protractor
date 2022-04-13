@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.22-browsers
+      - image: circleci/node:current-browsers
         environment:          
           DBUS_SESSION_BUS_ADDRESS: /dev/null
     steps:
@@ -43,8 +43,8 @@ jobs:
           name: WebDriver Update
           command: | 
             ./node_modules/.bin/webdriver-manager clean
-            ./node_modules/.bin/webdriver-manager update --versions.chrome 69.0.3497.81
-            ./node_modules/.bin/webdriver-manager start --versions.chrome 69.0.3497.81
+            ./node_modules/.bin/webdriver-manager update --versions.chrome 96.0.4664.110
+            ./node_modules/.bin/webdriver-manager start --versions.chrome 96.0.4664.110
           background: true
 
 
