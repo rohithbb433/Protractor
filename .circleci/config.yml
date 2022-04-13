@@ -33,8 +33,6 @@ jobs:
       - run:
           name: WebDriver Update
           command: |      
-            ./node_modules/.bin/webdriver-manager clean
-            ./node_modules/.bin/webdriver-manager update --versions.chrome 100.0.4896.75
             ./node_modules/.bin/webdriver-manager start --versions.chrome 100.0.4896.75
           background: true
 
