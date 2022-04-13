@@ -39,7 +39,7 @@ jobs:
       - run:
           name: WebDriver Update Selenium
           command: |      
-            webdriver-manager update
+            sudo webdriver-manager update
           background: true
 
 
