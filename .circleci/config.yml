@@ -34,7 +34,7 @@ jobs:
       - run:
           name: WebDriver Update Selenium
           command: |      
-            sudo webdriver-manager update --versions.chrome 69.0.3497.81
+            sudo webdriver-manager update
           background: true
 
 
