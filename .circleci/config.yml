@@ -33,7 +33,8 @@ jobs:
       - run:
           name: WebDriver Update
           command: | 
-            ./node_modules/.bin/webdriver-manager update --versions.chrome 69.0.3497.81    
+            ./node_modules/.bin/webdriver-manager update --versions.chrome 69.0.3497.81
+            ./node_modules/.bin/webdriver-manager start --versions.chrome 69.0.3497.81  
           background: true
 
       # - run:
@@ -43,7 +44,7 @@ jobs:
       #     background: true
 
 
-      - run: sleep 30
+      - run: sleep 10s
 
 
       - run:
