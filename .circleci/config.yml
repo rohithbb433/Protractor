@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11-browsers
+      - image: circleci/node:17.9-browsers
         environment:          
           DBUS_SESSION_BUS_ADDRESS: /dev/null
     steps:
@@ -37,11 +37,11 @@ jobs:
             ./node_modules/.bin/webdriver-manager start --versions.chrome 69.0.3497.81  
           background: true
 
-      # - run:
-      #     name: WebDriver Update Selenium
-      #     command: |      
-      #       sudo webdriver-manager update
-      #     background: true
+      - run:
+          name: WebDriver Update Selenium
+          command: |      
+            sudo webdriver-manager update
+          background: true
 
 
       - run: sleep 10s
