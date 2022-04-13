@@ -42,9 +42,9 @@ jobs:
       - run:
           name: WebDriver Update
           command: | 
-            ./node_modules/.bin/webdriver-manager clean
-            ./node_modules/.bin/webdriver-manager update --versions.chrome 69.0.3497.81
-            ./node_modules/.bin/webdriver-manager start --versions.chrome 69.0.3497.81
+            ./node_modules/protractor/bin/protractor clean
+            ./node_modules/protractor/bin/protractor update --versions.chrome 69.0.3497.81
+            ./node_modules/protractor/bin/protractor start --versions.chrome 69.0.3497.81
           background: true
 
 
