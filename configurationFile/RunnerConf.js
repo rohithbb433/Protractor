@@ -27,7 +27,7 @@ exports.config = {
     framework: 'jasmine',
     // Spec patterns are relative to the current working directory when
     // protractor is called.
-    specs: ['./../JavaScriptsFile/POM/APITesting/APITesting1.js'],
+    specs: ['./../JavaScriptsFile/POM/APITesting/APITesting.js'],
     onPrepare: function () {
         jasmine.getEnv().addReporter(
             new SpecReporter({

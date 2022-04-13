@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1649854873383' stop='1649854873971'>
+    <name>Errors in Protractor</name>
+    <title>Errors in Protractor</title>
+    <test-cases>
+        <test-case start='1649854873384' status='undefined'>
+            <name>GetMethod</name>
+            <title>GetMethod</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1649854873384' status='pending' stop='1649854873387'>
+            <name>GetMethod</name>
+            <title>GetMethod</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace></stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1649854873387' status='undefined'>
+            <name>PostMethod</name>
+            <title>PostMethod</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1649854873387' status='passed' stop='1649854873970'>
+            <name>PostMethod</name>
+            <title>PostMethod</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='64ed29a2-4c0c-4b54-8a60-5600dee62780-attachment.png' type='image/png' size='3249'/>
+            </attachments>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
