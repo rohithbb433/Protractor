@@ -42,9 +42,8 @@ jobs:
       - run:
           name: WebDriver Update
           command: | 
-            sudo ./node_modules/.bin/webdriver-manager clean
-            sudo ./node_modules/.bin/webdriver-manager update --versions.chrome 96.0.4664.110
-            sudo ./node_modules/.bin/webdriver-manager start --versions.chrome 96.0.4664.110
+             ./node_modules/.bin/webdriver-manager update --versions.chrome 96.0.4664.110
+             ./node_modules/.bin/webdriver-manager start --versions.chrome 96.0.4664.110
           background: true
 
 
