@@ -10,9 +10,18 @@ exports.config = {
         'browserName': 'chrome',
         shardTestFiles: true,
         maxInstances: 2,
-        // chromeOptions: {
-        //     args: ['--headless']
-        // }
+        chromeOptions: {
+            args: ['no-sandbox'
+                , '--test-type=browser'
+                , 'disable-infobars'
+                , '--disable-extensions'
+                , '--disable-dev-shm-usage'
+                , '--window-size=800,600'
+                , '--disable-gpu'
+                , '--headless'
+                , ' --single-process'
+                , '--silent']
+        }
     },
     // Framework to use. Jasmine is recommended.
     framework: 'jasmine',

@@ -1,6 +1,7 @@
 import { browser, element, by, ExpectedConditions, protractor } from 'protractor'
 import { Alert, WebElement } from 'selenium-webdriver';
 import { Workbook, Row, Cell } from 'exceljs';
+import { getNameOfDeclaration } from 'typescript';
 
 let map: Map<string, string> = new Map();
 let firstName: string;

@@ -1,12 +1,13 @@
 import { browser, element, by } from "protractor";
+import { deprecate } from "util";
 var Request = require("request");
 describe("Errors in Protractor", function () {
     browser.ignoreSynchronization = true; // for non-angular websites
     xit("GetMethod", function (done) {
 
         Request.get({
-            "headers": { "content-type": "application/json" },
-            "url": "https://reqres.in/api/users?page=2"
+            "headers": `{ "content-type": "application/json" }`,
+            "url": `https://reqres.in/api/users?page=2`
 
         }, (error: any, response: any, body: any) => {
             if (error) {
@@ -26,12 +27,12 @@ describe("Errors in Protractor", function () {
     it("PostMethod", function (done) {
 
         Request.post({
-            "headers": { "content-type": "application/json" },
+            "headers": `{ "content-type": "application/json" }`,
             "url": "https://reqres.in/api/users",
-            "body": JSON.stringify({
+            "body": JSON.stringify(`{
                 "name": "Rohith",
                 "job": "AutomationTestEngineer"
-            })
+            }`)
         }, async (error: any, response: any, body: any) => {
             if (error) {
                 return console.dir(error);

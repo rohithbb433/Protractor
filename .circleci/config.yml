@@ -1,0 +1,48 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.11-browsers
+        environment:          
+          DBUS_SESSION_BUS_ADDRESS: /dev/null
+    steps:
+      - checkout
+
+
+      - run: google-chrome --version 100.0.4896.75
+      
+      - save_cache:
+          key: node_modules-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+            - "./node_modules"
+
+
+      - run:
+          name: NPM Install
+          command: |
+            npm install
+
+
+      - run:
+          name: Install Protractor
+          command: |
+            sudo npm i -g protractor
+
+
+      - run:
+          name: WebDriver Update
+          command: |      
+            ./node_modules/.bin/webdriver-manager clean
+            ./node_modules/.bin/webdriver-manager update --versions.chrome 100.0.4896.75
+            ./node_modules/.bin/webdriver-manager start --versions.chrome 100.0.4896.75
+          background: true
+
+
+      - run: sleep 30
+
+
+      - run:
+          name: Test Run
+          command: |
+            protractor configurationFile/RunnerConf.js

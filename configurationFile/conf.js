@@ -5,10 +5,19 @@ exports.config = {
     directConnect: true,
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
-        'browserName': 'chrome'
-        // chromeOptions: {
-        //     args: ['--headless']
-        // }
+        'browserName': 'chrome',
+        chromeOptions: {
+            args: ['no-sandbox'
+                , '--test-type=browser'
+                , 'disable-infobars'
+                , '--disable-extensions'
+                , '--disable-dev-shm-usage'
+                , '--window-size=800,600'
+                , '--disable-gpu'
+                , '--headless'
+                , ' --single-process'
+                , '--silent']
+        }
     },
     // Framework to use. Jasmine is recommended.
     framework: 'jasmine',
